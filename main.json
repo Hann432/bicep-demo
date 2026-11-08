@@ -5,8 +5,25 @@
     "_generator": {
       "name": "bicep",
       "version": "0.48.1.52935",
-      "templateHash": "15369115908105907048"
+      "templateHash": "3774528129551284713"
     }
   },
-  "resources": []
+  "parameters": {
+    "location": {
+      "type": "string",
+      "defaultValue": "uksouth"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2023-05-01",
+      "name": "stcicddemostorage12345",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2"
+    }
+  ]
 }

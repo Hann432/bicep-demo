@@ -17,4 +17,4 @@ jobs:
         run: az bicep install
  
       - name: Validate Bicep
-        run: az bicep build --file infrastructure/main.bicep
+        run: az bicep build --file main.bicep
