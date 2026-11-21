@@ -17,6 +17,7 @@ jobs:
         run: |
           pwd
           ls
+          ls -a
           echo "Hello from Linux!"
  
       - name: Install Bicep
