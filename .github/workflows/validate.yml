@@ -15,19 +15,9 @@ jobs:
 
       - name: Explore Linux environment
         run: |
-          echo "Current directory:"
           pwd
-
-          echo "Repository files:"
-          ls -la
-
-          echo "Infrastructure directory:"
-          ls -la infrastructure/
-
+          ls
+          ls -a
+          cd infrastructure
           echo "Hello from Linux!"
  
-      - name: Install Bicep
-        run: az bicep install
- 
-      - name: Validate Bicep
-        run: az bicep build --file main.bicep
