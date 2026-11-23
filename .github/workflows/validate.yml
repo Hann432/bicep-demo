@@ -15,10 +15,15 @@ jobs:
 
       - name: Explore Linux environment
         run: |
+          echo "Current directory:"
           pwd
-          ls
-          ls -a
-          cd infrastructure
+
+          echo "Repository files:"
+          ls -la
+
+          echo "Infrastructure directory:"
+          ls -la infrastructure/
+
           echo "Hello from Linux!"
  
       - name: Install Bicep
